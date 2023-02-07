@@ -5,7 +5,7 @@ WORKDIR /app
 # Execute a pip install command using the list 'requirements.txt'
 RUN pip install Flask
 # Copy the app file into the image working directory
-ENV YOUR_NAME="Simon"
+ENV YOUR_NAME="SimonWells"
 COPY app.py .
 # State the listening port for the container. 
 # The app's code does not actually specify the port, so it would be useful to include here.
