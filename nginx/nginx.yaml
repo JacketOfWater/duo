@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: nginxproxy-container
-    image: zebra779/nginx:latest
+    image: zebra779/nginx-custom:latest
 ---
 apiVersion: v1
 kind: Service
