@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-app
+  labels:
+    app: flask
+spec:
+  containers:
+  - name: flask-cantainer
+    image: zebra779/duo:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app-service
+spec:
+  type: ClusterIP
+  selector:
+    app: flask
+  ports:
+  - protocol: TCP
+    port: 5000
+  

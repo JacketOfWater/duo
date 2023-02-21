@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: flask-app
+  name: nginxproxy
   labels:
-    app: flask
+    app: proxy
 spec:
   containers:
-  - name: flask-cantainer
-    image: zebra779/duo:latest
+  - name: nginxproxy-container
+    image: zebra779/nginx:latest
 ---
 apiVersion: v1
 kind: Service
@@ -16,8 +16,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: flask
+    app: proxy
   ports:
   - protocol: TCP
-    port: 80 
-    targetPort: 5500
+    port: 80
+    targetPort: 80
