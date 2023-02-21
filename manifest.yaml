@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: flask-cantainer
-    image: jacketofwater/duo:latest
+    image: zebra779/duo:latest
 ---
 apiVersion: v1
 kind: Service
